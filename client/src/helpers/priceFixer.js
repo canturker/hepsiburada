@@ -1,0 +1,3 @@
+const priceFixer = () => {
+  return;
+};

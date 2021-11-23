@@ -1,0 +1,30 @@
+{
+  "name": "hepsifly-demo-server",
+  "version": "0.1.0",
+  "author": "Ali Can Türker",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "npm run prod",
+    "server": "node ./dist",
+    "build": "rm -rf dist/ && babel src --out-dir dist",
+    "dev": "NODE_ENV=development npm run build  && npm run server",
+    "prod": "NODE_ENV=production npm run build  && npm run server",
+    "watch:dev": "nodemon"
+
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.4",
+    "nodemon": "2.0.15"
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
+  "nodemonConfig": { 
+    "exec": "npm run dev",
+    "watch": ["src/*"],
+    "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js", "dist/*"]
+  }
+}
