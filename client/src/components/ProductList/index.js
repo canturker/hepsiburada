@@ -22,7 +22,15 @@ const ProductList = ({ products }) => {
     <Container>
       <List>
         {list.map((product) => {
-          const { id, title, thumbnail, color, brand, price } = product;
+          const {
+            id,
+            title,
+            thumbnail,
+            color,
+            brand,
+            price,
+            discountPercentage,
+          } = product;
           return (
             <Product
               key={id}
@@ -32,6 +40,7 @@ const ProductList = ({ products }) => {
               color={color}
               brand={brand}
               price={price}
+              percentage={discountPercentage}
               addToBasket={() => {
                 dispatch(addBasketItem({ item: product }));
               }}
