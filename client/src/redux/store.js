@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-
+import { uiReducer } from './reducers/ui.reducer';
 import { productsReducer } from './reducers/products.reducer';
 import { basketReducer } from './reducers/basket.reducer';
 
@@ -12,6 +12,7 @@ import { apiMiddleware } from './middleware/core/api.middleware';
 const rootReducer = combineReducers({
   products: productsReducer,
   basket: basketReducer,
+  ui: uiReducer,
 });
 
 const featureMiddlewares = [
