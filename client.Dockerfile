@@ -2,6 +2,8 @@ FROM node:16-alpine
 
 WORKDIR /app/hepsiburada
 
+RUN cd /client
+
 RUN npm install && npm run build -n
 
 EXPOSE 3040
