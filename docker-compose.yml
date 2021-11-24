@@ -11,6 +11,14 @@ services:
       - 5000:5000
     container_name: client01
     restart: unless-stopped
+  nginx:
+    image: library/nginx:1.18.0-alpine
+    restart: unless-stopped
+    container_name: nginx01
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
   
   
   
