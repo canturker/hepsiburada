@@ -1,16 +1,17 @@
 services:
   api:
-    image: canturker/hepsiburada:latest
+    image: canturker/hepsiburada-api:latest
     ports:
       - 8080:8080
     container_name: api01
     restart: unless-stopped
-
-  nginx:
-    image: library/nginx:1.18.0-alpine
-    restart: unless-stopped
-    container_name: nginx01
+  client:
+    image: canturker/hepsiburada-client:latest
     ports:
-      - 80:80
-    volumes:
-      - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
+      - 5000:5000
+    container_name: client01
+    restart: unless-stopped
+  
+  
+  
+  

@@ -1,13 +1,13 @@
 FROM node:16-alpine
 
-WORKDIR /app/hepsiburada
+COPY . /app
 
-RUN cd /client
+WORKDIR /app/client
 
 RUN npm install && npm run build -n
 
-EXPOSE 3040
+EXPOSE 5000
 
 RUN npm install -g serve
 
-CMD serve -p 3040 -s build
+CMD serve -p 5000 -s build

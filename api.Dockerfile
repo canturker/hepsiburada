@@ -1,8 +1,8 @@
 FROM node:16-alpine
 
-WORKDIR /app/hepsiburada
+COPY . /app
 
-RUN cd /api
+WORKDIR /app/api
 
 EXPOSE 8080
 
