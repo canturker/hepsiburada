@@ -1,5 +1,10 @@
 # Hepsiburada Product List
 
+## Live Demo
+
+[Client](http://54.226.162.251:5000)
+[API](http://54.226.162.251:8080/api/products)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
