@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app/api
 
-RUN npm install -g @babel/core @babel/cli @babel/preset-env
+RUN npm install && npm run build-prod
 
 EXPOSE 8080
 
