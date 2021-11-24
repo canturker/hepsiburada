@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app/client
 
-RUN npm install && npm run build -n
+RUN npm install && npm run build-prod -n
 
 EXPOSE 5000
 

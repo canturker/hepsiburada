@@ -4,17 +4,13 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Project has product list API which returns predefined products with filtering and sorting for client.
-
 ### Prerequisites
 
 node v16.13.0
 
 npm v8.1.0
 
-### Installation for API and Client
-
-#### Installing - API
+#### Installation
 
 After pulling project
 
@@ -40,28 +36,6 @@ Then visit to see product list
 http://localhost:8080/api/products
 ```
 
-#### Installing - Client
-
-After pulling project
-
-```
-cd client
-```
-
-Install packages with
-
-```
-npm install
-```
-
-Then start with
-
-```
-npm run start-dev
-```
-
-### Deployment for API and Client
-
 #### Deployment - API
 
 ```
@@ -74,26 +48,22 @@ Then visit to see product list
 http://localhost:8080/api/products
 ```
 
-#### Deployment - Client
+## Example Filtering, Sorting
+
+### Filter
 
 ```
-npm run build
+http://localhost:8080/api/products?filter=color:Red,Blue
 ```
 
-Install serve if you don't have already
+### Sort
 
 ```
-npm install -g serve
+http://localhost:8080/api/products?sort=priceAsc
 ```
 
-And then serve build
+### Search
 
 ```
-serve -s build-prod
-```
-
-Then visit
-
-```
-http://localhost:5000
+http://localhost:8080/api/products?search=searchText
 ```
