@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { discountPriceFixer, priceFixer } from '../../helpers/priceFixer';
+import { priceFixer } from '../../helpers/priceFixer';
 import { isBasketIncludesProduct } from '../../redux/selectors/basket.selector';
 import {
   Container,
@@ -20,6 +20,7 @@ const Product = ({
   color,
   brand,
   price,
+  discountPrice,
   percentage,
   addToBasket,
 }) => {
@@ -43,7 +44,7 @@ const Product = ({
         ) : (
           <>
             <Price className='price-field'>
-              <b>{discountPriceFixer(price, percentage)}</b>
+              <b>{priceFixer(discountPrice)}</b>
               <br />
               <span className='actual-price'>{priceFixer(price)}</span>{' '}
               <span className='discount-percentage'>{percentage}%</span>

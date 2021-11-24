@@ -29,6 +29,7 @@ const ProductList = ({ products }) => {
             color,
             brand,
             price,
+            discountPrice,
             discountPercentage,
           } = product;
           return (
@@ -40,6 +41,7 @@ const ProductList = ({ products }) => {
               color={color}
               brand={brand}
               price={price}
+              discountPrice={discountPrice}
               percentage={discountPercentage}
               addToBasket={() => {
                 dispatch(addBasketItem({ item: product }));

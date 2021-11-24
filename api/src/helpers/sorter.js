@@ -1,9 +1,9 @@
 const priceAsc = (a, b) => {
-  return a.price - b.price;
+  return a.discountPrice - b.discountPrice;
 };
 
 const priceDesc = (a, b) => {
-  return b.price - a.price;
+  return b.discountPrice - a.discountPrice;
 };
 
 const titleAsc = (a, b) => {
