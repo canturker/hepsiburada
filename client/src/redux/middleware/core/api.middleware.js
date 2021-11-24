@@ -9,7 +9,7 @@ export const apiMiddleware =
     next(action);
 
     if (action.type.includes(API_REQUEST)) {
-      const { body, query } = action.payload;
+      const { query } = action.payload;
       const { url, method, feature } = action.meta;
       let REQUEST_URL = BASE_URL + url;
       if (query) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeBasketItem } from '../../redux/actions/basket.action';
 import { setModal } from '../../redux/actions/ui.action';
