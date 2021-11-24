@@ -92,6 +92,8 @@ And then serve build
 serve -s build
 ```
 
+Then visit
+
 ```
 http://localhost:5000
 ```
