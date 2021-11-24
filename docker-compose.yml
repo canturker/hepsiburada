@@ -7,6 +7,8 @@ services:
     restart: unless-stopped
   client:
     image: canturker/hepsiburada-client:latest
+    env_file:
+      - .env
     ports:
       - 5000:5000
     container_name: client01
